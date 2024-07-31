@@ -7,3 +7,4 @@ riderModule.iml
 #Mac OS
 .DS_Store
 _MACOSX
+/venv

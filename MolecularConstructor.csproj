@@ -16,4 +16,16 @@
       <PackageReference Include="Silk.NET.Windowing" Version="2.21.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="venv\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="venv\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="venv\**" />
+    </ItemGroup>
+
 </Project>
