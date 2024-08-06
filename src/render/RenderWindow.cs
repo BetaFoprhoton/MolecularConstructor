@@ -1,12 +1,14 @@
-﻿using Silk.NET.Maths;
+﻿using MolecularConstructor.render;
+using Silk.NET.Maths;
 using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 
 namespace MolecularConstructor.silk;
 
 public class RenderWindow {
-    private static IWindow? _window;
-    private static GL Gl;
+    private IWindow? _window;
+    private FreeCamera _camera;
+    private GL Gl;
     
     public RenderWindow(int width, int height, string title) {
         //Create a window.
@@ -15,14 +17,22 @@ public class RenderWindow {
         options.Title = title;
         
         _window = Window.Create(options);
+        _camera = new FreeCamera(_window);
         
-        //Assign events.
-        /*
+        
          _window.Load += OnLoad;
-         _window.Update += OnUpdate;
-         _window.Render += OnRender;    
+         //_window.Update += OnUpdate;
+         //_window.Render += OnRender;    
          _window.FramebufferResize += OnFramebufferResize;
-         */
+         
+    }
+    
+    private void OnFramebufferResize(Vector2D<int> newSize) {
+        Gl.Viewport(newSize);
+    }
+
+    private void OnLoad() {
+        Gl = GL.GetApi(_window);
     }
 
     public void Run() {

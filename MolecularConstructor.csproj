@@ -18,14 +18,21 @@
 
     <ItemGroup>
       <Compile Remove="venv\**" />
+      <Compile Remove="src\venv\**" />
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Remove="venv\**" />
+      <EmbeddedResource Remove="src\venv\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="venv\**" />
+      <None Remove="src\venv\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="src\core\deepMD\" />
     </ItemGroup>
 
 </Project>
