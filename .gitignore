@@ -8,5 +8,5 @@ riderModule.iml
 .DS_Store
 _MACOSX
 /venv
-/src/venv
+#/src/venv
 /.idea
