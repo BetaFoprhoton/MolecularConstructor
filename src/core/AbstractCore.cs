@@ -1,6 +1,6 @@
 ﻿using Silk.NET.OpenGL;
 
-namespace MolecularConstructor.core;
+namespace RealismConstructor.core;
 
 public abstract class AbstractCore {
 

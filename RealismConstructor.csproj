@@ -8,17 +8,26 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Avalonia" Version="11.1.2-rc1" />
+      <PackageReference Include="Avalonia.Desktop" Version="11.1.2-rc1" />
+      <PackageReference Include="Avalonia.Diagnostics" Version="11.1.2-rc1" />
+      <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.2-rc1" />
       <PackageReference Include="pythonnet" Version="3.1.0-preview2024-07-03" />
       <PackageReference Include="Silk.NET.Core" Version="2.21.0" />
       <PackageReference Include="Silk.NET.Input" Version="2.21.0" />
       <PackageReference Include="Silk.NET.Maths" Version="2.21.0" />
       <PackageReference Include="Silk.NET.OpenGL" Version="2.21.0" />
       <PackageReference Include="Silk.NET.Windowing" Version="2.21.0" />
+      <PackageReference Include="SukiUI" Version="6.0.0-beta7" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Remove="venv\**" />
       <Compile Remove="src\venv\**" />
+      <Compile Update="src\ui\UIWindow.axaml.cs">
+        <DependentUpon>Window1.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

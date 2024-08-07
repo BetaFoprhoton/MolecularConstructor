@@ -5,9 +5,9 @@ using Silk.NET.Maths;
 using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 
-namespace MolecularConstructor;
+namespace RealismConstructor;
 
-public class MolecularConstructorMain {
+public class Program {
     public static void Main() {
         Runtime.PythonDLL = Environment.CurrentDirectory.Replace(@"bin\Debug\net8.0", @"src\venv\python312.dll");
         PythonEngine.Initialize();
